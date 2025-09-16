@@ -19,6 +19,63 @@
             background-color: #2563eb;
             color: white;
         }
+        /* Carousel styles */
+        .carousel {
+            position: relative;
+            height: 20rem; /* matches previous img height (h-48) */
+            overflow: hidden;
+        }
+        .carousel img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+        }
+        .carousel img.active {
+            opacity: 1;
+            position: relative;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border-radius: 9999px;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #2563eb;
+        }
+        .carousel-btn.left { 
+            left: 0.5rem; 
+        }
+
+
+        .carousel-btn.right { right: 0.5rem; }
+        .carousel-indicators {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .carousel-indicators button {
+            width: 0.5rem;
+            height: 0.5rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .carousel-indicators button.active { background: rgba(37,99,235,1); }
     </style>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
@@ -79,51 +136,98 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <a href="project-solar-airplane.html" class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300 block hover:no-underline" data-aos="fade-up">
-                    <img src="https://huggingface.co/spaces/TheDyingDumb/engineering-portfolio/resolve/main/images/1729392456401 (1).jpg" alt="Drone Project" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="image/Solar Airplane 1.jpg" alt="Solar Project 1" class="active">
+                        <img src="image/Solar Airplane 2.png" alt="Solar Project 2">
+                        <img src="image/Solar Airplane 3.jpg" alt="Solar Project 3">
+                        <img src="image/Solar Airplane 4.jpg" alt="Solar Project 4">
+                        <img src="image/Solar Airplane 5.jpg" alt="Solar Project 5">
+                        <img src="image/Solar Airplane 6.jpg" alt="Solar Project 6">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                            <button aria-label="Slide 3"></button>
+                            <button aria-label="Slide 4"></button>
+                            <button aria-label="Slide 5"></button>
+                            <button aria-label="Slide 6"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-semibold text-slate-800">UCI Solar Airplane</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
                         </div>
                         <p class="text-slate-600 mb-4">
                             Designed and built a semi-autonomous solar-powered drone with fly-by-wire and auto-pilot capabilities.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Aerodynamics</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Structure Mechanics</span>
                             <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">SolidWorks</span>
                             <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">FEA</span>
                             <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">CFD</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Woodworking</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">3D printing</span>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Project 2 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="http://static.photos/science/640x360/202" alt="Rocket Project" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="image/MAE 159 1.png" alt="MAE 159 1" class="active">
+                        <img src="image/MAE 159 2.png" alt="MAE 159 2">
+                        <img src="image/MAE 159 3.png" alt="MAE 159 3">
+                        <img src="image/MAE 159 4.png" alt="MAE 159 4">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                            <button aria-label="Slide 3"></button>
+                            <button aria-label="Slide 4"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-semibold text-slate-800">Airplane Design Project</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <a href="https://docs.google.com/document/d/e/2PACX-1vToPL2zpdYrnFWD7qsq7h0YBtKIR8P1kVuKYo2w-jN-XTQbXcKaZG1tpJayAOExehjFh_cQGiWMGBHz/pub" target="_blank" rel="noopener noreferrer">
+                                <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            </a>
                         </div>
                         <p class="text-slate-600 mb-4">
-                            Developed a hybrid rocket propulsion system for student rocketry competitions with optimized fuel grain geometry.
+                            Designs, evaluates, and compares three aircraft configurations (aluminum, hybrid, and composite) based on given parameters including but not limited to: PASS, range, TOLF, and max wingspan.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Propulsion</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Thermodynamics</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">CFD</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">MATLAB</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">CAD</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Lightweight structure</span>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Project 3 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img src="http://static.photos/technology/640x360/303" alt="Aircraft Wing" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="image/DOE 1.png" alt="DOE 1" class="active">
+                        <img src="image/DOE 2.png" alt="DOE 2">
+                        <img src="image/DOE 3.png" alt="DOE 3">
+                        <img src="image/DOE 4.png" alt="DOE 4">
+                        <img src="image/DOE 5.png" alt="DOE 5">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                            <button aria-label="Slide 3"></button>
+                            <button aria-label="Slide 4"></button>
+                            <button aria-label="Slide 5"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-slate-800">Composite Wing Design</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <h3 class="text-xl font-semibold text-slate-800">DOE</h3>
+                            <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
                         </div>
                         <p class="text-slate-600 mb-4">
                             Conducted structural analysis and optimization of a composite aircraft wing using finite element methods.
@@ -138,11 +242,20 @@
 
                 <!-- Project 4 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up">
-                    <img src="http://static.photos/technology/640x360/404" alt="Wind Tunnel" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="http://static.photos/technology/640x360/404" alt="Wind Tunnel 1" class="active">
+                         <img src="http://static.photos/technology/640x360/405" alt="Wind Tunnel 2">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-semibold text-slate-800">Wind Tunnel Testing</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
                         </div>
                         <p class="text-slate-600 mb-4">
                             Designed and tested airfoil models in subsonic wind tunnel to analyze lift and drag characteristics.
@@ -157,11 +270,20 @@
 
                 <!-- Project 5 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="http://static.photos/technology/640x360/505" alt="UAV" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="http://static.photos/technology/640x360/505" alt="UAV 1" class="active">
+                        <img src="http://static.photos/technology/640x360/506" alt="UAV 2">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-semibold text-slate-800">Electric UAV Design</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
                         </div>
                         <p class="text-slate-600 mb-4">
                             Designed and built a long-endurance electric UAV with autonomous flight capabilities for aerial surveying.
@@ -176,11 +298,20 @@
 
                 <!-- Project 6 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img src="http://static.photos/technology/640x360/606" alt="Satellite" class="w-full h-48 object-cover">
+                    <div class="carousel">
+                        <img src="http://static.photos/technology/640x360/606" alt="Satellite 1" class="active">
+                        <img src="http://static.photos/technology/640x360/607" alt="Satellite 2">
+                        <button class="carousel-btn left" aria-label="Previous image"><i data-feather="arrow-left"></i></button>
+                        <button class="carousel-btn right" aria-label="Next image"><i data-feather="arrow-right"></i></button>
+                        <div class="carousel-indicators">
+                            <button class="active" aria-label="Slide 1"></button>
+                            <button aria-label="Slide 2"></button>
+                        </div>
+                    </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-semibold text-slate-800">CubeSat Structural Design</h3>
-                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                            <i data-feather="file-text" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
                         </div>
                         <p class="text-slate-600 mb-4">
                             Developed structural components for a CubeSat mission, focusing on vibration resistance and thermal stability.
@@ -242,8 +373,44 @@
             });
         });
 
+        // Simple per-card carousel functionality
+        document.querySelectorAll('.carousel').forEach((carousel) => {
+            const images = Array.from(carousel.querySelectorAll('img'));
+            const prevBtn = carousel.querySelector('.carousel-btn.left');
+            const nextBtn = carousel.querySelector('.carousel-btn.right');
+            const indicators = Array.from(carousel.querySelectorAll('.carousel-indicators button'));
+            let current = images.findIndex(img => img.classList.contains('active'));
+            if (current < 0) current = 0;
+
+            function show(index) {
+                images.forEach((img, i) => img.classList.toggle('active', i === index));
+                indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+            }
+
+            prevBtn && prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                current = (current - 1 + images.length) % images.length;
+                show(current);
+            });
+
+            nextBtn && nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                current = (current + 1) % images.length;
+                show(current);
+            });
+
+            indicators.forEach((btn, i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    current = i;
+                    show(current);
+                });
+            });
+        });
+
         // Replace Feather icons
         feather.replace();
+
     </script>
 </body>
 </html>
