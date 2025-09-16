@@ -1,0 +1,27 @@
+generate a portfolio website for an aerospace engineering student
+Change the student name to first name: Quang Vinh, last name: Nguyen
+use this image as the student image
+replace it with the uploaded image
+no reverse back to the previous image
+replace the student profile picture with this picture
+replace the image in the about me section with this image
+change some info in the about section as well as the rest of the page if needed
+School year: recently graduated
+Graduation date: Sep 2025
+University: University of California, Irvine
+Passion in aerospace: conceptual flying mechanism, propulsion system, and controls
+Research projects: sustainable aviation, new structure mechanics/materials
+change the degree to B.S Aerospace Engineering
+remove the contact input and change my contact email to vinhqn2@uci.edu. phone number +1 (657) 543-3960. Location: Santa Ana, California
+remove this block
+remove this
+expand the contact information to fill the whole get in touch instead of half
+remove almost all but LinkedIn in the Connect with me section
+remove the filter for the projects section
+replace the photo for UCI Solar Airplane with this 
+add something to allow user to click on a project to explore more, each project page should be able to have some images, a more detail description, and a link to the document of the project
+add something to allow user to click on a project to explore more, each project page should be able to have some images, a more detail description, and a link to the document of the project
+add a function where i can click on the projects tab and goes to a more detailed page for each project
+add a function where i can click on the projects tab and goes to a more detailed page for each project
+make each project have the ability to view multiple images as well as a link to the documents
+change composite wing design to tensegrity structure lab

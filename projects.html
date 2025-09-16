@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Aerospace Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-slate-800 flex items-center">
+                        <i data-feather="wind" class="text-blue-600 mr-2"></i>
+                        <span>Quang Vinh Nguyen</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#about" class="text-slate-600 hover:text-blue-600 transition">About</a>
+                    <a href="projects.html" class="text-slate-600 hover:text-blue-600 transition">Projects</a>
+                    <a href="index.html#skills" class="text-slate-600 hover:text-blue-600 transition">Skills</a>
+                    <a href="index.html#contact" class="text-slate-600 hover:text-blue-600 transition">Contact</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Resume</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-blue-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-16">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <a href="index.html#about" class="text-slate-600 text-lg hover:text-blue-600 transition">About</a>
+            <a href="projects.html" class="text-slate-600 text-lg hover:text-blue-600 transition">Projects</a>
+            <a href="index.html#skills" class="text-slate-600 text-lg hover:text-blue-600 transition">Skills</a>
+            <a href="index.html#contact" class="text-slate-600 text-lg hover:text-blue-600 transition">Contact</a>
+            <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition text-lg">Resume</a>
+        </div>
+    </div>
+
+    <!-- Projects Header -->
+    <section class="pt-32 pb-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-aos="fade-up">Engineering Projects</h1>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Explore my researches, engineering projects as well as in class applications. Each project represents 
+                    practical application of engineering principles and problem-solving skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <a href="project-solar-airplane.html" class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300 block hover:no-underline" data-aos="fade-up">
+                    <img src="https://huggingface.co/spaces/TheDyingDumb/engineering-portfolio/resolve/main/images/1729392456401 (1).jpg" alt="Drone Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">UCI Solar Airplane</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Designed and built a semi-autonomous solar-powered drone with fly-by-wire and auto-pilot capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Aerodynamics</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Structure Mechanics</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">SolidWorks</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">FEA</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">CFD</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/science/640x360/202" alt="Rocket Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">Airplane Design Project</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Developed a hybrid rocket propulsion system for student rocketry competitions with optimized fuel grain geometry.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Propulsion</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Thermodynamics</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">CFD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/technology/640x360/303" alt="Aircraft Wing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">Composite Wing Design</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Conducted structural analysis and optimization of a composite aircraft wing using finite element methods.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Structures</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Composites</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">FEA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up">
+                    <img src="http://static.photos/technology/640x360/404" alt="Wind Tunnel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">Wind Tunnel Testing</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Designed and tested airfoil models in subsonic wind tunnel to analyze lift and drag characteristics.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Aerodynamics</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Experimental</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/technology/640x360/505" alt="UAV" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">Electric UAV Design</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Designed and built a long-endurance electric UAV with autonomous flight capabilities for aerial surveying.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Propulsion</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Autonomy</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Battery Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/technology/640x360/606" alt="Satellite" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-slate-800">CubeSat Structural Design</h3>
+                            <i data-feather="github" class="text-slate-500 hover:text-blue-600 cursor-pointer"></i>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Developed structural components for a CubeSat mission, focusing on vibration resistance and thermal stability.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Structures</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">Space Systems</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">FEA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-xl font-bold flex items-center">
+                        <i data-feather="wind" class="text-blue-400 mr-2"></i>
+                        <span>Quang Vinh Nguyen</span>
+                    </a>
+                    <p class="text-slate-400 mt-2">B.S. Aerospace Engineering</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="index.html#about" class="text-slate-300 hover:text-white transition">About</a>
+                        <a href="projects.html" class="text-slate-300 hover:text-white transition">Projects</a>
+                        <a href="index.html#skills" class="text-slate-300 hover:text-white transition">Skills</a>
+                        <a href="index.html#contact" class="text-slate-300 hover:text-white transition">Contact</a>
+                    </div>
+                    <p class="text-slate-400 text-sm">© 2023 Quang Vinh Nguyen. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Replace Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
